@@ -21,7 +21,31 @@ import RoundedButton from './RoundedButton'
 
 var { width, height } = Dimensions.get('window')
 
-const FirstRoute = () => 
+const FirstRoute = () =>
+<ScrollView >
+<View style={{ backgroundColor: '#fff',flex: 1,flexDirection: 'column',justifyContent: 'space-between'}}>
+
+    <Text style={[styles.sliderTextTest,{fontSize:25,marginTop:30,marginBottom:15}]}>What is our philosophy?</Text>
+    <Text style={[styles.sliderTextTest,{fontSize:18,marginTop:5,marginRight:20,marginLeft:20,marginBottom:30}]}>Based on machine learning and artificial intelligence, our algorithms strive to provide convenience to our globe trotting customers. Our plans are tailor made according to our customers needs. We are because of our customers. </Text>
+    <Text style={[styles.sliderTextTest,{fontSize:25,marginBottom:15}]}>What inspired us?</Text>
+    <Text style={[styles.sliderTextTest,{fontSize:18,marginTop:5,marginRight:20,marginLeft:20,marginBottom:20}]}>Systematic travellers waste a lot of time exploring and planning their trip according to their needs. We specialize in planning itineraries in a matter of seconds. All our plans are 100% customizable and your feedbacks help us evolve.</Text>
+    
+    <View style={{flex: 1,flexDirection: 'column',justifyContent: 'center',alignItems: 'center',marginBottom:70}}>
+    
+      <View style={{marginTop: 25,width:200}}>
+        <RoundedButton onPress={()=>Linking.openURL('mailto:rishabhpanwar05@gmail.com')}>
+           Contact Us
+        </RoundedButton>
+      </View>
+      
+    </View>
+    
+     <Text style={[styles.sliderTextTest,{fontSize:13,color:'black'}]}>Created By : Rishabh Panwar & Swati Jain Incubation Center</Text>
+    
+</View>
+</ScrollView>; 
+
+const SecondRoute = () => 
 
 <ScrollView>
 
@@ -35,8 +59,8 @@ const FirstRoute = () =>
   
   <View style={[ styles.container1, { backgroundColor: '#fff' } ]} >
     <View style = {styles.container4}>
-      <Text style={[styles.sliderTextTest,{fontSize:25,paddingTop:20,marginBottom:10}]}>Portable Trip Wallet</Text>
-      <Text style={[styles.sliderTextTest,{fontSize:18,marginTop:10,marginLeft:10,marginBottom:20}]}>One stop platform that keeps all the pertinent bookings made on even third party websites.</Text>
+      <Text style={[styles.sliderTextTest,{fontSize:25,paddingTop:20,marginBottom:10}]}>Carry your Trip Plan</Text>
+      <Text style={[styles.sliderTextTest,{fontSize:18,marginTop:10,marginLeft:10,marginBottom:20}]}>One stop platform that keeps all the pertinent bookings made on even third party websites and apps.</Text>
         </View>
     <Image style={[styles.image,{margin:20}]} source={require('./img/ff_bag.png')}/>
   </View>
@@ -49,15 +73,15 @@ const FirstRoute = () =>
     </View>
   </View>
 </ScrollView>;
-  
-const SecondRoute = () => 
+
+const ThirdRoute = () => 
 
 <ScrollView>   
   <View style={[ styles.container, { backgroundColor: '#fff',alignItems:'center'} ]}>
 
-    <Image style={[styles.imageTestimonial,{marginTop:30}]} source={require('./img/face5.jpg')}/>
-    <Text style={[styles.sliderTextTest,{fontSize:30,paddingTop:20}]}>King Khan loves the King of Trips!</Text>
-    <Text style={[styles.sliderTextTest,{fontSize:20,paddingTop:10}]}>-Shahrukh Khan</Text>
+    <Image style={[styles.imageTestimonial,{marginTop:30}]} source={require('./img/face3.png')}/>
+    <Text style={[styles.sliderTextTest,{fontSize:24,paddingTop:20}]}>A must have app for those who are wanderlusting right now!</Text>
+    <Text style={[styles.sliderTextTest,{fontSize:18,paddingTop:10}]}>-Ishita Bhandari</Text>
     
     <View style={{
       marginTop:10,
@@ -65,9 +89,9 @@ const SecondRoute = () =>
       borderBottomWidth: 1, 
       width: width-40}}/>
     
-    <Image style={[styles.imageTestimonial,{marginTop:30}]} source={require('./img/face4.jpg')}/>
-    <Text style={[styles.sliderTextTest,{fontSize:30,paddingTop:20}]}>Anushka loved it! So did I!</Text>
-    <Text style={[styles.sliderTextTest,{fontSize:20,paddingTop:10}]}>-Virat Kohli</Text>
+    <Image style={[styles.imageTestimonial,{marginTop:30}]} source={require('./img/face4.png')}/>
+    <Text style={[styles.sliderTextTest,{fontSize:24,paddingTop:20}]}>It really helped me when I visited London the last month. Highly recommended!</Text>
+    <Text style={[styles.sliderTextTest,{fontSize:18,paddingTop:10}]}>-Prakirn Kumar</Text>
     
     <View style={{
       marginTop:10,
@@ -75,21 +99,23 @@ const SecondRoute = () =>
       borderBottomWidth: 1, 
       width: width-40}}/>
     
-    <Image style={[styles.imageTestimonial,{marginTop:30}]} source={require('./img/face3.jpg')}/>
-    <Text style={[styles.sliderTextTest,{fontSize:30,paddingTop:20}]}>True champions at what they do!</Text>
-    <Text style={[styles.sliderTextTest,{fontSize:20,paddingTop:10,marginBottom:10}]}>-MS Dhoni</Text>
+    <Image style={[styles.imageTestimonial,{marginTop:30}]} source={require('./img/face5.png')}/>
+    <Text style={[styles.sliderTextTest,{fontSize:24,paddingTop:20}]}>My group is thankful to these guys. Super!</Text>
+    <Text style={[styles.sliderTextTest,{fontSize:18,paddingTop:10,marginBottom:10}]}>-Ritambhara Singh</Text>
+    
+    <View style={{
+      marginTop:10,
+      borderBottomColor: 'black', 
+      borderBottomWidth: 1, 
+      width: width-40}}/>
+    
+    <Image style={[styles.imageTestimonial,{marginTop:30}]} source={require('./img/face2.png')}/>
+    <Text style={[styles.sliderTextTest,{fontSize:24,paddingTop:20}]}>Liked the user friendly interface. Kudos to the team!</Text>
+    <Text style={[styles.sliderTextTest,{fontSize:18,paddingTop:10,marginBottom:10}]}>-Suryansh Soni</Text>
     
   </View>
 </ScrollView>;
-const ThirdRoute = () => 
 
-<View style={[ styles.container, { backgroundColor: '#fff' } ]} >
-
-  <RoundedButton onPress={()=>Linking.openURL('mailto:rishabhpanwar05@gmail.com&subject=Regarding some information')}>
-    Contact Us 
-  </RoundedButton>
-  
-</View>;
 
 
 export default class tabtest extends PureComponent {
@@ -97,9 +123,9 @@ export default class tabtest extends PureComponent {
     intromode: false,
     index: 0,
     routes: [
-      { key: '1', title: 'Features' },
-      { key: '2', title: 'Testimonials' },
-      { key: '3', title: 'Contact Us' },
+      { key: '1', title: 'About Us' },
+      { key: '2', title: 'Features' },
+      { key: '3', title: 'Testimonials' },
 
     ],
   };
@@ -109,7 +135,7 @@ export default class tabtest extends PureComponent {
   _renderHeader = props => <TabBar {...props} />;
 
   _renderDotIndicator() {
-    return <PagerDotIndicator pageCount={3} dotStyle={{marginBottom: 50}} selectedDotStyle={{marginBottom:50,   backgroundColor:'#000'}} />;
+    return <PagerDotIndicator pageCount={3} dotStyle={{marginBottom: 20}} selectedDotStyle={{marginBottom:20, backgroundColor:'#000'}} />;
   }
 
   _renderScene = SceneMap({
@@ -179,7 +205,6 @@ export default class tabtest extends PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center', 
     alignItems: 'stretch'
   },
